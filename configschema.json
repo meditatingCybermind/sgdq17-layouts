@@ -168,7 +168,6 @@
 				}
 			},
 			"description": "Login information for the private areas of the tracker API.",
-			"required": ["username", "password"],
 			"default": null
 		},
 		"youtubeUploadScriptPath": {

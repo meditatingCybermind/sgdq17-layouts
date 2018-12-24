@@ -10,6 +10,11 @@ const TimeObject = require('../shared/classes/time-object');
 const timer = new NanoTimer();
 const checklistComplete = nodecg.Replicant('checklistComplete');
 const currentRun = nodecg.Replicant('currentRun');
+
+if(!currentRun.value.runners || !currentRun.value.runners.length) {
+	currentRun.value.runners = [];
+}
+
 const stopwatch = nodecg.Replicant('stopwatch', {
 	defaultValue: (function () {
 		const to = new TimeObject(0);

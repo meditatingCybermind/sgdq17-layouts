@@ -179,7 +179,7 @@ function formatDonation({rawAmount, newTotal}) {
 	return {
 		amount,
 		rawAmount,
-		newTotal: formatDollars(rawNewTotal, {cents: false}),
+		newTotal: formatDollars(rawNewTotal, {cents: true}),
 		rawNewTotal
 	};
 }
