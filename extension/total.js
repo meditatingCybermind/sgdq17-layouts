@@ -1,6 +1,6 @@
 'use strict';
 
-const DONATION_STATS_URL = 'https://gamesdonequick.com/tracker/20?json';
+const DONATION_STATS_URL = 'http://tracker.megamanathon.com/2?json';
 
 // Packages
 const request = require('request');

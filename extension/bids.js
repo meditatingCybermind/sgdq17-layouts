@@ -12,10 +12,10 @@ const nodecg = require('./util/nodecg-api-context').get();
 const POLL_INTERVAL = 60 * 1000;
 const BIDS_URL = nodecg.bundleConfig.useMockData ?
 	'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/allBids.json' :
-	'https://gamesdonequick.com/tracker/search/?type=allbids&event=20';
+	'http://tracker.megamanathon.com/search/?type=allbids&event=2';
 const CURRENT_BIDS_URL = nodecg.bundleConfig.useMockData ?
 	'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/currentBids.json' :
-	'https://gamesdonequick.com/tracker/search/?type=allbids&feed=current&event=20';
+	'http://tracker.megamanathon.com/search/?type=allbids&feed=current&event=2';
 const currentBidsRep = nodecg.Replicant('currentBids', {defaultValue: []});
 const allBidsRep = nodecg.Replicant('allBids', {defaultValue: []});
 const bitsTotal = nodecg.Replicant('bits:total');

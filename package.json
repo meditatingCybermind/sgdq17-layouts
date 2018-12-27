@@ -42,7 +42,7 @@
     "istanbul": "^0.4.3",
     "mocha": "^3.4.2"
   },
-  "homepage": "https://gamesdonequick.com/",
+  "homepage": "https://megamanathon.com/",
   "license": "Apache-2.0",
   "nodecg": {
     "compatibleRange": "~0.9.0",

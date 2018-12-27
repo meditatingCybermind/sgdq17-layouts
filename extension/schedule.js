@@ -162,7 +162,7 @@ function update() {
 	const runnersPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
 			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/runners.json' :
-			'https://private.gamesdonequick.com/tracker/search',
+			'http://tracker.megamanathon.com/search',
 		qs: {
 			type: 'runner',
 			event: 20
@@ -173,7 +173,7 @@ function update() {
 	const runsPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
 			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/schedule.json' :
-			'https://private.gamesdonequick.com/tracker/search',
+			'http://tracker.megamanathon.com/search',
 		qs: {
 			type: 'run',
 			event: 20
@@ -184,14 +184,14 @@ function update() {
 	const adsPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
 			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/ads.json' :
-			'https://private.gamesdonequick.com/tracker/gdq/ads/20/',
+			'http://tracker.megamanathon.com/gdq/ads/2/',
 		json: true
 	});
 
 	const interviewsPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
 			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/interviews.json' :
-			'https://private.gamesdonequick.com/tracker/gdq/interviews/20/',
+			'http://tracker.megamanathon.com/gdq/interviews/2/',
 		json: true
 	});
 

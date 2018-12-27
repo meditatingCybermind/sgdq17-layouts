@@ -112,7 +112,7 @@
 					this.replaceBottomText(
 						bid.isBitsChallenge ?
 							'Use&nbsp;Twitch&nbsp;chat&nbsp;to&nbsp;contribute&nbsp;Bits!' : '' +
-							'gamesdonequick.com/donate'
+							'megamanathon.com/donate'
 					);
 
 					this.bitsChallenge = bid.isBitsChallenge;
@@ -416,7 +416,7 @@
 				onComplete() {
 					// If this is the last bid, be kind, rewind.
 					if (index === bidsArray.length - 1) {
-						this.replaceBottomText('gamesdonequick.com/donate');
+						this.replaceBottomText('megamanathon.com/donate');
 					}
 				},
 				callbackScope: this
