@@ -79,7 +79,7 @@ nodecg.listenFor('setTotal', ({type, newValue}) => {
 	if (type === 'cash') {
 		total.value = {
 			raw: parseFloat(newValue),
-			formatted: formatDollars(newValue, {cents: false})
+			formatted: formatDollars(newValue, {cents: true})
 		};
 	} else if (type === 'bits') {
 		bitsTotal.value = parseInt(newValue, 10);
@@ -139,7 +139,7 @@ function updateTotal() {
 				} else {
 					total.value = {
 						raw: freshTotal,
-						formatted: formatDollars(freshTotal, {cents: false})
+						formatted: formatDollars(freshTotal, {cents: true})
 					};
 					resolve(true);
 				}
