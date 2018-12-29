@@ -15,7 +15,8 @@
 				display: flex;
 				background: url("img/background.png") repeat-x;
 				width: 1920px;
-				height: 100px;
+				height: 55px;
+				padding-top: 45px;
 				background-position-y: 45px;
 			}
 
@@ -26,13 +27,14 @@
 			}
 
 			#gdqLogo {
-				margin-right: 3px;
 				z-index: 3;
 				overflow:hidden;
 				background: url("../../img/MM7/Logo.png") no-repeat;
-				flex-shrink: 0;
 				width: 350px;
-				/*filter: brightness(0.75);*/
+				position: absolute;
+				left: 0;
+				bottom: 0;
+
 			}
 
 			#fireworks {
@@ -48,6 +50,7 @@
 				height: 100%;
 				overflow: hidden;
 				position: relative;
+				padding-left: 350px;
 			}
 
 			#topBorder {
@@ -67,9 +70,9 @@
 				align-items: flex-start;
 				line-height: 1;
 				white-space: nowrap;
+				height: 100%;
 				z-index: 1;
 				min-width: 1px; /* needed for fitMainText method */
-				padding-top: 1px;
 				@apply --layout-flex;
 			}
 
@@ -110,7 +113,7 @@
 
 			#cta > div {
 				line-height: 54px;
-				padding-top: 45px;
+				padding-top: 1px;
 				flex-shrink: 0;
 			}
 
@@ -172,7 +175,7 @@
 			</div>
 			<div id="cta">
 				<div class="shadow"><span class="highlight">#MegaManathon</span> benefits Child's Play.</div>
-				<div class="shadow">Make your donation at <span class="highlight">megamanathon.com</span></div>
+				<div class="shadow">Donate to Child's Play at <span class="highlight">MegaManathon.com</span></div>
 			</div>
 			<div id="newRecord" class="shadow">
 				<gdq-stepped-gradient

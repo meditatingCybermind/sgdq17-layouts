@@ -21,11 +21,6 @@
 				total.on('change', newVal => {
 					this._handleTotalChanged(this.$.totalTextAmount, newVal.raw);
 				});
-
-				this.$.bitsTotalAmount.rawValue = 0;
-				bitsTotal.on('change', newVal => {
-					this._handleTotalChanged(this.$.bitsTotalAmount, newVal);
-				});
 			});
 		}
 
