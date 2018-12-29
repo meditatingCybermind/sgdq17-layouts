@@ -181,24 +181,11 @@ function update() {
 		json: true
 	});
 
-	const adsPromise = request({
-		uri: nodecg.bundleConfig.useMockData ?
-			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/ads.json' :
-			'http://tracker.megamanathon.com/gdq/ads/2/',
-		json: true
-	});
-
-	const interviewsPromise = request({
-		uri: nodecg.bundleConfig.useMockData ?
-			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/interviews.json' :
-			'http://tracker.megamanathon.com/gdq/interviews/2/',
-		json: true
-	});
-
 	return Promise.all([
-		runnersPromise, runsPromise, adsPromise, interviewsPromise
-	]).then(([runnersJSON, runsJSON, adsJSON, interviewsJSON]) => {
+		runnersPromise, runsPromise
+	]).then(([runnersJSON, runsJSON]) => {
 		const formattedRunners = [];
+
 		runnersJSON.forEach(obj => {
 			formattedRunners[obj.pk] = {
 				stream: obj.fields.stream.split('/').filter(part => part).pop(),
@@ -213,8 +200,6 @@ function update() {
 		const formattedSchedule = calcFormattedSchedule({
 			rawRuns: runsJSON,
 			formattedRunners,
-			formattedAds: adsJSON.map(formatAd),
-			formattedInterviews: interviewsJSON.map(formatInterview)
 		});
 
 		// If nothing has changed, return.
@@ -376,7 +361,7 @@ function _seekToArbitraryRun(runOrOrder) {
  * @returns {Array} - A formatted schedule.
  */
 
-function calcFormattedSchedule({rawRuns, formattedRunners, formattedAds, formattedInterviews}) {
+function calcFormattedSchedule({rawRuns, formattedRunners}) {
 	const flatSchedule = [];
 
 	// NOTE: We *probably* don't have to do this sort step,
@@ -387,52 +372,17 @@ function calcFormattedSchedule({rawRuns, formattedRunners, formattedAds, formatt
 	rawRuns = rawRuns.sort((a, b) => a.fields.order - b.fields.order);
 
 	// Sort ads and interviews by order, then suborder.
-	const formattedAdsAndInterviews = formattedAds.concat(formattedInterviews).sort(suborderSort);
 
 	let lastIndex = 0;
 	rawRuns.forEach(run => {
 		run = formatRun(run, formattedRunners);
 		flatSchedule.push(run);
-
-		formattedAdsAndInterviews.slice(lastIndex).some((item, index) => {
-			if (item.order > run.order) {
-				return true;
-			}
-
-			lastIndex = index;
-
-			// This theoretically should never be hit?
-			if (item.order < run.order) {
-				return false;
-			}
-
-			flatSchedule.push(item);
-			return false;
-		});
 	});
 
 	const schedule = [];
 
-	let adBreak;
 	flatSchedule.forEach((item, index) => {
 		if (item.type === 'ad') {
-			if (!adBreak) {
-				adBreak = {
-					type: 'adBreak',
-					ads: [],
-					id: adBreakIdCounter++
-				};
-			}
-
-			adBreak.ads.push(item);
-
-			const nextItem = flatSchedule[index + 1];
-			if (nextItem && nextItem.type === 'ad') {
-				return;
-			}
-
-			schedule.push(adBreak);
-			adBreak = null;
 			return;
 		}
 
