@@ -1,8 +1,8 @@
 (function () {
 	'use strict';
 
-	const AGDQ17_TOTAL = 2222790.52;
-	window.AGDQ17_TOTAL = AGDQ17_TOTAL;
+	const MMAT6_TOTAL = 7097.00;
+	window.MMAT6_TOTAL = MMAT6_TOTAL;
 
 	const currentBids = nodecg.Replicant('currentBids');
 	const currentLayout = nodecg.Replicant('gdq:currentLayout');
@@ -44,7 +44,7 @@
 					if (numDeclared >= replicants.length) {
 						Polymer.RenderStatus.beforeNextRender(this, this.run);
 						total.on('change', (newVal, oldVal) => {
-							if (oldVal && newVal.raw >= AGDQ17_TOTAL && oldVal.raw < AGDQ17_TOTAL) {
+							if (oldVal && newVal.raw >= MMAT6_TOTAL && oldVal.raw < MMAT6_TOTAL) {
 								this.alertNewRecord();
 							}
 						});
@@ -230,7 +230,7 @@
 			}
 
 			// If we have passed the previous event's donation total, return.
-			if (total.value.raw > AGDQ17_TOTAL) {
+			if (total.value.raw > MMAT6_TOTAL) {
 				return tl;
 			}
 
