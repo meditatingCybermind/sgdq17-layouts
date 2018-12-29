@@ -52,7 +52,7 @@
 		formatRawValue(rawValue) {
 			return rawValue.toLocaleString('en-US', {
 				maximumFractionDigits: 0
-			}).replace(/1/ig, '\u00C0');
+			});
 		}
 	}
 

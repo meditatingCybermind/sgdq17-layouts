@@ -7,8 +7,8 @@
 		<style include="gdq-text-styles">
 			:host {
 				position: relative;
-				height: calc(100% - 1px);
-				margin-top: 1px;
+				height: calc(60% - 1px);
+				margin-top: 45px;
 				white-space: nowrap;
 				padding-left: 16px;
 				padding-right: 8px;
@@ -26,9 +26,10 @@
 			}
 
 			#leftCap {
-				position: absolute;
-				top: 0;
-				left: 0;
+				position: relative;
+				bottom: 30px;
+				left: 128px;
+				height: 110px;
 				z-index: 4;
 			}
 
@@ -36,11 +37,10 @@
 				@apply --layout-vertical;
 			}
 
-			#totalText,
-			#bitsTotal {
+			#totalText {
 				color: white;
-				font-family: gdqpixel, 'sans-serif';
-				font-weight: 400;
+				font-family: futura-condensed-bold;
+				font-weight: bold;
 				z-index: 4;
 				@apply --layout-horizontal;
 				@apply --layout-center;
@@ -49,53 +49,16 @@
 			#totalText {
 				position: relative;
 				top: -2px;
-				font-size: 20px;
-			}
-
-			#bitsTotal {
-				position: relative;
-				top: 1px;
-				align-self: flex-end;
-			}
-
-			#bitsTotalIcon-container {
-				width: 6px;
-				height: 0;
-				margin-right: 5px;
-				@apply --layout-horizontal;
-				@apply --layout-center-center;
-			}
-
-			#bitsTotalIcon {
-				position: relative;
-				top: 1px;
-			}
-
-			#bitsTotalAmount {
-				font-size: 10px;
+				font-size: 50px;
 			}
 		</style>
 
-		<gdq-stepped-gradient
-			id="background"
-			start-entered
-			steps="3"
-			start-color="#4f40b5"
-			end-color="#312871"></gdq-stepped-gradient>
-
-		<img id="leftCap" src="[[importPath]]img/total-leftcap.png">
+		<img id="leftCap" src="[[importPath]]../../img/MM7/CharityLogo.png">
 
 		<div id="totals">
 			<div id="totalText" class="shadow">
 				<div id="totalTextDollars">$</div>
 				<div id="totalTextAmount"></div>
-			</div>
-
-			<div id="bitsTotal">
-				<div id="bitsTotalIcon-container">
-					<img id="bitsTotalIcon" width="16" src="img/bitsicon.png">
-				</div>
-				<div id="bitsTotalAmount" class="shadow"></div>
 			</div>
 		</div>
 	</template>

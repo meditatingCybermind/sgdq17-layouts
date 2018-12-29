@@ -61,13 +61,6 @@
 					<template is="dom-repeat" items="[[techStationDuties]]" mutable-data>
 						<paper-checkbox category="techStationDuties" checked="[[item.complete]]">[[item.name]]</paper-checkbox>
 					</template>
-
-					<div id="audioCheckboxWrapper">
-						<paper-checkbox
-							id="audioCheckbox"
-							class="non-interactive"
-							checked="[[audioReady]]">Audio Engineer(s) Ready</paper-checkbox>
-					</div>
 				</div>
 			</section>
 
@@ -87,14 +80,6 @@
 				</div>
 			</section>
 		</div>
-
-		<paper-tooltip
-			id="audioTooltip"
-			for="audioCheckboxWrapper"
-			position="right"
-			animation-delay="0">
-			Automatically checked when the Audio Engineer(s) have completed their own checklist.
-		</paper-tooltip>
 	</template>
 
 	<script src="gdq-checklist.js"></script>
