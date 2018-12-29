@@ -165,7 +165,7 @@ function update() {
 			'http://tracker.megamanathon.com/search',
 		qs: {
 			type: 'runner',
-			event: 20
+			event: 2
 		},
 		json: true
 	});
@@ -176,7 +176,7 @@ function update() {
 			'http://tracker.megamanathon.com/search',
 		qs: {
 			type: 'run',
-			event: 20
+			event: 2
 		},
 		json: true
 	});
