@@ -11,10 +11,10 @@
 		ready() {
 			super.ready();
 			checklist.on('change', newVal => {
-				this.extraContent = newVal.extraContent;
-				this.techStationDuties = newVal.techStationDuties;
-				this.stageTechDuties = newVal.stageTechDuties;
-				this.audioReady = newVal.audioEngineerDuties.every(task => task.complete);
+				this.stage = newVal.stage;
+				this.audio = newVal.audio;
+				this.host = newVal.host;
+				this.streamop = newVal.streamop;
 			});
 
 			this._checkboxChanged = this._checkboxChanged.bind(this);
