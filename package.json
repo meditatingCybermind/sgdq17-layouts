@@ -81,7 +81,12 @@
         "file": "info.html",
         "width": 640,
         "height": 420
-      }
+    },
+    {
+      "file": "standard_1.html",
+      "width": 640,
+      "height": 420
+    }
     ],
     "assetCategories": [
       {
