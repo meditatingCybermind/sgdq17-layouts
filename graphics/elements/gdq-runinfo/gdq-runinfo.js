@@ -48,7 +48,7 @@
 
 		fitText() {
 			Polymer.flush();
-			textFit(this.$.name, {maxFontSize: this.maxNameSize});
+			// textFit(this.$.name, {maxFontSize: this.maxNameSize});
 
 			const MAX_CATEGORY_WIDTH = this.clientWidth - 32;
 			const categorySpan = this.$.category.firstElementChild;

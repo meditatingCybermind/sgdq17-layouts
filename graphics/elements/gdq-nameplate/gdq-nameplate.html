@@ -22,7 +22,7 @@ Audio indicator comes out from side opposide placement indicator
 				position: absolute;
 				display: flex;
 				height: 35px;
-				font-size: 25px;
+				font-size: 40px;
 				text-transform: uppercase;
 				font-family: futura-condensed-bold;
 				font-weight: bold;
@@ -137,6 +137,10 @@ Audio indicator comes out from side opposide placement indicator
 				text-align: center;
 				padding-right: 10px;
 				line-height: 32px;
+			}
+
+			#twitchIcon {
+				height: 65%;
 			}
 
 			#medal {
@@ -256,7 +260,7 @@ Audio indicator comes out from side opposide placement indicator
 				<div id="names">
 					<div id="namesName" class="shadow">[[name]]</div>
 					<div id="namesTwitch">
-						<img src="[[importPath]]img/twitch.png" style="position: relative; top: 4px;">
+						<img id="twitchIcon" src="[[importPath]]img/twitch.png" style="position: relative; top: 4px;">
 						<span class="shadow">[[twitch]]</span>
 					</div>
 				</div>
