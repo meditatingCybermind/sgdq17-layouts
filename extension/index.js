@@ -40,18 +40,6 @@ module.exports = function (nodecg) {
 	// Tracker logins expire every 2 hours. Re-login every 90 minutes.
 	setInterval(loginToTracker, 90 * 60 * 1000);
 
-	if (nodecg.bundleConfig.twitch) {
-		require('./twitch-ads');
-		require('./twitch-bits');
-
-		// If the appropriate config params are present,
-		// automatically update the Twitch game and title when currentRun changes.
-		if (nodecg.bundleConfig.twitch.titleTemplate) {
-			nodecg.log.info('Automatic Twitch stream title updating enabled.');
-			require('./twitch-title-updater');
-		}
-	}
-
 	if (nodecg.bundleConfig.twitter && nodecg.bundleConfig.twitter.userId) {
 		if (nodecg.bundleConfig.twitter.enabled) {
 			require('./twitter');
