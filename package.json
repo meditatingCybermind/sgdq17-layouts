@@ -101,6 +101,16 @@
       "file": "mm_notime_1.html",
       "width": 1920,
       "height": 1080
+    },
+    {
+      "file": "audio_dashboard.html",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "file": "host.html",
+      "width": 1920,
+      "height": 1080
     }
     ],
     "assetCategories": [
