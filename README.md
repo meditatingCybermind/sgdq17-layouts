@@ -4,12 +4,12 @@ The on-stream graphics used during Summer Games Done Quick 2017.
 This is a [NodeCG](http://github.com/nodecg/nodecg) v0.9 bundle. You will need to have NodeCG v0.9 installed to run it.
 
 ## Video Breakdown
-We unfortunately do not have time to make a video breakdown for this event's bundle. 
+We unfortunately do not have time to make a video breakdown for this event's bundle.
 However, [we did make one for the last event](https://www.youtube.com/watch?v=vBAZXchbI3U&list=PLTEhlYdONYxv1wk2FsIpEz92X3x2E7bSx), which still has a lot of similarities with this one,
 
 ## Requirements
 - [NodeCG v0.9.x](https://github.com/nodecg/nodecg/releases)
-- [Node.js v7 or greater](https://nodejs.org/)
+- [Node.js v7 or greater up to 8.14.1](https://nodejs.org/)
 
 ## Installation
 1. Install to `nodecg/bundles/sgdq17-layouts`.
@@ -43,7 +43,7 @@ we provide a small script that sends mock donations:
 In production, you'd use [TipoftheHats/donation-socket-repeater](https://github.com/TipoftheHats/donation-socket-repeater) along with the "Postback URL" feature of [GamesDoneQuick/donation-tracker](https://github.com/GamesDoneQuick/donation-tracker).
 
 ### Lightning Round
-[Lightning Round](https://github.com/GamesDoneQuick/lightning-round) is a new system we made for SGDQ 2017 for gathering interview questions from Twitter. It exists in two parts: one part running "in the cloud" as a Firebase app, and one part running locally as part of this NodeCG bundle. 
+[Lightning Round](https://github.com/GamesDoneQuick/lightning-round) is a new system we made for SGDQ 2017 for gathering interview questions from Twitter. It exists in two parts: one part running "in the cloud" as a Firebase app, and one part running locally as part of this NodeCG bundle.
 
 Lightning Round is pretty weird and kind of difficult to set up. You can watch these videos for more information but please bear in mind that they are outdated, as they were made for AGDQ 2017, not SGDQ 2017:
 - [Lightning Round Overview](https://www.youtube.com/watch?v=-qzIfS7KxCQ&index=4&list=PLTEhlYdONYxv1wk2FsIpEz92X3x2E7bSx)
