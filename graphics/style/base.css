@@ -1,6 +1,7 @@
 @import 'font/montserrat.css';
 @import 'font/gdqpixel.css';
 @import 'font/futura-condensed-bold.css';
+@import 'font/gamer.css';
 
 body {
 	font-family: montserrat, sans-serif;
