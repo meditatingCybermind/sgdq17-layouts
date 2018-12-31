@@ -39,7 +39,14 @@
 				height: 57px;
 				width: 100%;
 				font-size: 42px;
-				bottom: 25px;
+			}
+
+			gdq-timer#toptimer {
+				top: 85px;
+			}
+
+			gdq-timer#bottomtimer {
+				bottom: 85px;
 			}
 
 			#runners {
@@ -78,45 +85,18 @@
 				margin-top: 11px;
 			}
 		</style>
-		<gdq-runinfo class="center" max-name-size="30"></gdq-runinfo>
+		<gdq-runinfo-multi class="center" max-name-size="30"></gdq-runinfo>
 
 		<div id="runners">
 			<gdq-nameplate index="0"></gdq-nameplate>
 			<gdq-nameplate index="1"></gdq-nameplate>
 		</div>
 
-		<gdq-timer ></gdq-timer>
+		<gdq-timer id="toptimer"></gdq-timer>
+		<gdq-timer id="bottomtimer"></gdq-timer>
 
 
 	</template>
-
-	<script>
-		const currentRun = nodecg.Replicant('currentRun');
-
-		Polymer({
-			is: 'mm-info-multi',
-
-			properties: {
-				numRunners: {
-					type: Number,
-					reflectToAttribute: true,
-					value: 1
-				}
-			},
-
-			ready() {
-				currentRun.on('change', newVal => {
-					if (!newVal) {
-						return;
-					}
-
-					if (newVal.runners.length !== 3 && newVal.runners.length <= 4) {
-						this.numRunners = newVal.runners.length;
-					}
-				});
-			}
-		});
-	</script>
 
 	<script src="mm-info-multi.js"></script>
 </dom-module>
