@@ -1,7 +1,7 @@
 <link rel="import" href="../../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../../shared/style/gdq-text-styles.html">
 <link rel="import" href="../../elements/gdq-nameplate/gdq-nameplate.html">
-<link rel="import" href="../../elements/gdq-runinfo/gdq-runinfo.html">
+<link rel="import" href="../../elements/gdq-runinfo-multi/gdq-runinfo-multi.html">
 <link rel="import" href="../../elements/gdq-timer/gdq-timer.html">
 <link rel="import" href="../../elements/gdq-twitter/gdq-twitter.html">
 <link rel="import" href="../../elements/gdq-sponsors/gdq-sponsors.html">
@@ -20,13 +20,6 @@
 				font-variant-numeric: tabular-nums;
 				font-feature-settings: "tnum";
 				color: white;
-			}
-			gdq-runinfo {
-				left: 0;
-				top: 0;
-				width: 397px;
-				height: 168px;
-				--gdq-runinfo-misc-height: 35px;
 			}
 
 			.center {
@@ -50,21 +43,17 @@
 			}
 
 			gdq-nameplate {
-				position: relative;
+				position: absolute;
 				margin-bottom: 1px;
-				--gdq-nameplate-width: 377px;
+				--gdq-nameplate-width: 300px;
 			}
 
-			gdq-nameplate#player-one {
+			gdq-nameplate#player-two {
 				/* lol whoever comes after me will hate me
 				I'm sorry! I didn't have much time to do this
 				like literally 48 hours for everything
 				including learning stuff*/
-				top: -320px;
-			}
-
-			gdq-nameplate#player-two {
-				bottom: -270px;
+				bottom: 45px;
 			}
 
 			.hidden {
@@ -85,7 +74,7 @@
 				margin-top: 11px;
 			}
 		</style>
-		<gdq-runinfo-multi class="center" max-name-size="30"></gdq-runinfo>
+		<gdq-runinfo-multi class="center" max-name-size="30"></gdq-runinfo-multi>
 
 		<div id="runners">
 			<gdq-nameplate class="center" index="0" id="player-one"></gdq-nameplate>
