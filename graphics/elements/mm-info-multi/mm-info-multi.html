@@ -49,22 +49,22 @@
 				bottom: 85px;
 			}
 
-			#runners {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				position: relative;
-				padding-left: 8px;
-				margin-bottom: -18px;
-			}
-
-
 			gdq-nameplate {
 				position: relative;
 				margin-bottom: 1px;
 				--gdq-nameplate-width: 377px;
-				left: 127px;
-				top: 245px;
+			}
+
+			gdq-nameplate#player-one {
+				/* lol whoever comes after me will hate me
+				I'm sorry! I didn't have much time to do this
+				like literally 48 hours for everything
+				including learning stuff*/
+				top: -320px;
+			}
+
+			gdq-nameplate#player-two {
+				bottom: -270px;
 			}
 
 			.hidden {
@@ -88,8 +88,8 @@
 		<gdq-runinfo-multi class="center" max-name-size="30"></gdq-runinfo>
 
 		<div id="runners">
-			<gdq-nameplate index="0"></gdq-nameplate>
-			<gdq-nameplate index="1"></gdq-nameplate>
+			<gdq-nameplate class="center" index="0" id="player-one"></gdq-nameplate>
+			<gdq-nameplate class="center" index="1" id="player-two"></gdq-nameplate>
 		</div>
 
 		<gdq-timer id="toptimer"></gdq-timer>
