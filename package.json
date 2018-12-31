@@ -82,6 +82,11 @@
         "width": 640,
         "height": 420
     },
+      {
+        "file": "info-no-timer.html",
+        "width": 640,
+        "height": 420
+    },
     {
       "file": "gdq_standard_1.html",
       "width": 640,
@@ -98,7 +103,7 @@
       "height": 1080
     },
     {
-      "file": "mm_standard_2.html",
+      "file": "mm_notime_1.html",
       "width": 1920,
       "height": 1080
     }

@@ -2,24 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Standard 2</title>
+	<title>Info</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
 
 	<link rel="stylesheet" href="style/base.css">
 	<link rel="import" href="../shared/imports/gsap.html">
-	<link rel="import" href="elements/mm-info/mm-info.html">
+	<link rel="import" href="elements/mm-info-no-timer/mm-info-no-timer.html">
 	<style>
 		#container {
-			width: 1920px;
-			height: 1080px;
-		}
-		.center {
-			margin: auto;
-			width: 100%;
-		}
-		#info {
 			width: 640px;
 			height: 420px;
 		}
@@ -27,9 +19,7 @@
 </head>
 <body>
 	<div id="container">
-		<div id="info" class="center">
-			<mm-info></mm-info>
-		</div>
+		<mm-info-no-timer></mm-info-no-timer>
 	</div>
 
 	<script>

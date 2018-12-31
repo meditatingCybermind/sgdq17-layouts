@@ -1,0 +1,112 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../shared/style/gdq-text-styles.html">
+<link rel="import" href="../../elements/gdq-nameplate/gdq-nameplate.html">
+<link rel="import" href="../../elements/gdq-runinfo/gdq-runinfo.html">
+<link rel="import" href="../../elements/gdq-twitter/gdq-twitter.html">
+<link rel="import" href="../../elements/gdq-sponsors/gdq-sponsors.html">
+
+<dom-module id="mm-info-no-timer">
+	<template>
+		<style include="gdq-text-styles">
+			:host {
+				position: absolute;
+				width: 640px;
+				height: 420px;
+				display: flex;
+				font-size: 46px;
+				background: url("img/bg.png") no-repeat;
+				font-weight: 700;
+				font-variant-numeric: tabular-nums;
+				font-feature-settings: "tnum";
+				color: white;
+			}
+			gdq-runinfo {
+				left: 0;
+				top: 0;
+				width: 397px;
+				height: 168px;
+				--gdq-runinfo-misc-height: 35px;
+			}
+
+			.center {
+				margin: auto;
+				width: 100%;
+			}
+
+			#runners {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				position: relative;
+				padding-left: 8px;
+				margin-bottom: -18px;
+			}
+
+
+			gdq-nameplate {
+				position: relative;
+				margin-bottom: 1px;
+				--gdq-nameplate-width: 377px;
+				left: 127px;
+				top: 245px;
+			}
+
+			.hidden {
+				display: none;
+			}
+
+			/* One runner */
+			:host([num-runners="1"]) #runners {
+				margin-top: 9px;
+			}
+
+			:host([num-runners="1"]) gdq-nameplate:not([index="0"]) {
+				display: none;
+			}
+
+			/* Two runners */
+			:host([num-runners="2"]) #runners {
+				margin-top: 11px;
+			}
+		</style>
+		<gdq-runinfo class="center" max-name-size="30"></gdq-runinfo>
+
+		<div id="runners">
+			<gdq-nameplate index="0"></gdq-nameplate>
+			<gdq-nameplate index="1"></gdq-nameplate>
+		</div>
+
+	</template>
+
+	<script>
+		const currentRun = nodecg.Replicant('currentRun');
+
+		Polymer({
+			is: 'mm-info-no-timer',
+
+			properties: {
+				numRunners: {
+					type: Number,
+					reflectToAttribute: true,
+					value: 1
+				}
+			},
+
+			ready() {
+				currentRun.on('change', newVal => {
+					if (!newVal) {
+						return;
+					}
+
+					if (newVal.runners.length !== 3 && newVal.runners.length <= 4) {
+						this.numRunners = newVal.runners.length;
+					}
+				});
+			}
+		});
+	</script>
+
+	<script src="mm-info-no-timer.js"></script>
+</dom-module>
+
+fuck
