@@ -46,7 +46,8 @@
 
 		formatRawValue(rawValue) {
 			return rawValue.toLocaleString('en-US', {
-				maximumFractionDigits: 2
+				maximumFractionDigits: 2,
+				minimumFractionDigits: 2
 			});
 		}
 	}
