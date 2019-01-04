@@ -45,21 +45,12 @@ if (nodecg.bundleConfig && nodecg.bundleConfig.donationSocketUrl) {
 
 	// Get initial data, then listen for donations.
 	updateTotal().then(() => {
-		socket.on('donation', data => {
-			if (!data || !data.rawAmount) {
-				return;
-			}
-
-			const donation = formatDonation(data);
-			nodecg.sendMessage('donation', donation);
-
+		setInterval(function(){
 			if (autoUpdateTotal.value) {
-				total.value = {
-					raw: donation.rawNewTotal,
-					formatted: donation.newTotal
-				};
+				updateTotal();
+				nodecg.log.trace('updatedTotal');
 			}
-		});
+		 }, 10000);
 	});
 
 	socket.on('disconnect', () => {
