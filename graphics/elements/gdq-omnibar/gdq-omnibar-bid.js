@@ -16,12 +16,12 @@ class GdqOmnibarBid extends Polymer.Element {
 			onStart() {
 				if (this.bid.isBitsChallenge) {
 					this.$.background.startColor = '#7e31b2';
-					this.$.background.endColor = '#4a196b';
+					this.$.background.endColor = '#7e31b2';
 					this.$.totalAndDelta.style.justifyContent = 'flex-start';
 					this.$.bitsIcon.removeAttribute('hidden');
 					this.$.total.text = `${this.bid.total} / ${this.bid.goal}`.replace(/\$/ig, '');
 					this.$.total.startColor = '#e4ffff';
-					this.$.total.endColor = '#94d9d0';
+					this.$.total.endColor = '#e4ffff';
 				}
 			},
 			callbackScope: this

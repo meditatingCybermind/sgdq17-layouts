@@ -81,37 +81,37 @@
         "file": "info.html",
         "width": 640,
         "height": 420
-    },
+      },
       {
         "file": "info-no-timer.html",
         "width": 640,
         "height": 420
-    },
-    {
-      "file": "mm_standard_1.html",
-      "width": 1920,
-      "height": 1080
-    },
-    {
-      "file": "mm_standard_2.html",
-      "width": 1920,
-      "height": 1080
-    },
-    {
-      "file": "mm_notime_1.html",
-      "width": 1920,
-      "height": 1080
-    },
-    {
-      "file": "audio_dashboard.html",
-      "width": 1920,
-      "height": 1080
-    },
-    {
-      "file": "host.html",
-      "width": 1920,
-      "height": 1080
-    }
+      },
+      {
+        "file": "mm_standard_1.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "mm_standard_2.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "mm_notime_1.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "audio_dashboard.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "host.html",
+        "width": 1920,
+        "height": 1080
+      }
     ],
     "assetCategories": [
       {

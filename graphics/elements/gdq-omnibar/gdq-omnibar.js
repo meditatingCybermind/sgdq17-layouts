@@ -57,11 +57,11 @@
 			const self = this;
 			const parts = [
 				this.showRecordTracker,
-				this.showCTA,
 				this.showUpNext,
 				this.showChallenges,
 				this.showChoices,
-				this.showCurrentPrizes
+				this.showCurrentPrizes,
+				this.showCTA,
 			];
 
 			function processNextPart() {
@@ -240,7 +240,7 @@
 
 			tl.add(this.showLabel('RECORD TRACKER', '20px', {
 				startColor: '#76ca7c',
-				endColor: '#26952d'
+				endColor: '#76ca7c'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
@@ -310,7 +310,7 @@
 
 			tl.add(this.showLabel('COMING UP NEXT', '20px', {
 				startColor: '#fffdd4',
-				endColor: '#ffcd00'
+				endColor: '#fffdd4'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
@@ -366,7 +366,7 @@
 
 			tl.add(this.showLabel('CHALLENGES', '24px', {
 				startColor: '#7fbac1',
-				endColor: '#33838a'
+				endColor: '#7fbac1'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
@@ -442,7 +442,7 @@
 				if (index === 0) {
 					tl.add(this.showLabel(bid.description.replace('||', ' -- '), '16px', {
 						startColor: '#ae7fc1',
-						endColor: '#71338a'
+						endColor: '#ae7fc1'
 					}), '+=0.03');
 				} else {
 					tl.add(this.changeLabelText(bid.description.replace('||', ' -- ')), '+=0.03');
@@ -490,7 +490,7 @@
 
 			tl.add(this.showLabel('PRIZES', '32px', {
 				startColor: '#cc7e7e',
-				endColor: '#803030'
+				endColor: '#cc7e7e'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
