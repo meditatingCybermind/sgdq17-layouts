@@ -162,7 +162,7 @@ function update() {
 	const runnersPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
 			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/runners.json' :
-			'http://tracker.megamanathon.com/search',
+			'http://tracker.magfast.org/search',
 		qs: {
 			type: 'runner',
 			event: 2
@@ -173,7 +173,7 @@ function update() {
 	const runsPromise = request({
 		uri: nodecg.bundleConfig.useMockData ?
 			'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/schedule.json' :
-			'http://tracker.megamanathon.com/search',
+			'http://tracker.magfast.org/search',
 		qs: {
 			type: 'run',
 			event: 2

@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'jumpman';
+    src: url('Jumpman.otf') format('opentype');
+    font-weight: bold;
+    font-style: condensed;
+}
