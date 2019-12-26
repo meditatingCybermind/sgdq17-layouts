@@ -1,7 +1,7 @@
 (function () {
 	'use strict';
 
-	const MMAT6_TOTAL = 7097.00;
+	const MMAT6_TOTAL = 70979999999999999.00;
 	window.MMAT6_TOTAL = MMAT6_TOTAL;
 
 	const currentBids = nodecg.Replicant('currentBids');
