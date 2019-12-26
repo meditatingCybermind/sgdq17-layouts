@@ -12,10 +12,10 @@ const nodecg = require('./util/nodecg-api-context').get();
 const POLL_INTERVAL = 60 * 1000;
 const PRIZES_URL = nodecg.bundleConfig.useMockData ?
 	'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/allPrizes.json' :
-	'http://tracker.megamanathon.com/search/?type=prize&event=2';
+	'http://tracker.megamanathon.com/search/?type=prize&event=3';
 const CURRENT_PRIZES_URL = nodecg.bundleConfig.useMockData ?
 	'https://dl.dropboxusercontent.com/u/6089084/gdq_mock/currentPrizes.json' :
-	'http://tracker.megamanathon.com/search/?type=prize&feed=current&event=2';
+	'http://tracker.megamanathon.com/search/?type=prize&feed=current&event=3';
 
 const currentPrizes = nodecg.Replicant('currentPrizes', {defaultValue: []});
 const allPrizes = nodecg.Replicant('allPrizes', {defaultValue: []});
