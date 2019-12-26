@@ -7,7 +7,7 @@ const request = require('request-promise').defaults({jar: true}); // <= Automati
 // Ours
 const nodecgApiContext = require('./util/nodecg-api-context');
 
-const LOGIN_URL = 'http://tracker.megamanathon.com/admin/login/';
+const LOGIN_URL = 'http://tracker.magfast.org/admin/login/';
 
 module.exports = function (nodecg) {
 	// Store a reference to this nodecg API context in a place where other libs can easily access it.
