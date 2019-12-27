@@ -3,6 +3,8 @@
 @import 'font/futura-condensed-bold.css';
 @import 'font/jumpman.css';
 @import 'font/gamer.css';
+@import 'font/oswald-m.css';
+@import 'font/oswald-r.css';
 
 body {
 	font-family: montserrat, sans-serif;
