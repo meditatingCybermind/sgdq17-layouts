@@ -47,6 +47,11 @@
     "paper-input": "^2.0.0",
     "paper-styles": "^2.0.0",
     "polymer": "^2.0.1",
-    "webcomponentsjs": "^v1.0.0"
+    "webcomponentsjs": "^v1.0.0",
+    "paper-button": "^2.0.0",
+    "paper-icon-button": "^2.0.0",
+    "vaadin-combo-box": "v2.0.0-alpha4",
+    "iron-iconset-svg": "1 - 2",
+    "iron-form": "2.0-preview"
   }
 }

@@ -165,7 +165,7 @@ function update() {
 			'http://tracker.magfast.org/search',
 		qs: {
 			type: 'runner',
-			event: 2
+			event: 3
 		},
 		json: true
 	});
@@ -176,7 +176,7 @@ function update() {
 			'http://tracker.magfast.org/search',
 		qs: {
 			type: 'run',
-			event: 2
+			event: 3
 		},
 		json: true
 	});
