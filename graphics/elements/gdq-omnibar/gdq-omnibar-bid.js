@@ -20,8 +20,8 @@ class GdqOmnibarBid extends Polymer.Element {
 					this.$.totalAndDelta.style.justifyContent = 'flex-start';
 					this.$.bitsIcon.removeAttribute('hidden');
 					this.$.total.text = `${this.bid.total} / ${this.bid.goal}`.replace(/\$/ig, '');
-					this.$.total.startColor = '#e4ffff';
-					this.$.total.endColor = '#e4ffff';
+					this.$.total.startColor = '#800d09';
+					this.$.total.endColor = '#800d09';
 				}
 			},
 			callbackScope: this

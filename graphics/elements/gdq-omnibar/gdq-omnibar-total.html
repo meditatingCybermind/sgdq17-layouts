@@ -37,12 +37,20 @@
 			}
 
 			#totalText {
-				color: white;
+				color: #FE1A11;
 				font-family: jumpman;
 				font-weight: bold;
 				z-index: 4;
 				@apply --layout-horizontal;
 				@apply --layout-center;
+				text-shadow:
+					-1px -1px 0 #000,
+					1px -1px 0 #000,
+					-1px 1px 0 #000,
+					1px 1px 0 #000,
+					0 0 5px rgba(0, 0, 0, 0.82);
+				-webkit-text-stroke-width: 2px;
+				-webkit-text-stroke-color: #fece1c;
 			}
 
 			#totalText {
@@ -52,7 +60,7 @@
 			}
 		</style>
 
-		<img id="leftCap" src="[[importPath]]../../img/MagFast2020/CharityLogo.png">
+		<img id="leftCap" src="[[importPath]]../../img/MagFast2020/CharityLogo2.png">
 
 		<div id="totals">
 			<div id="totalText" class="shadow">

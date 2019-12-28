@@ -309,8 +309,8 @@
 			this.setMainContent(tl, elements);
 
 			tl.add(this.showLabel('COMING UP NEXT', '20px', {
-				startColor: '#EBCB8B',
-				endColor: '#EBCB8B'
+				startColor: '#800d09',
+				endColor: '#800d09'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
@@ -365,8 +365,8 @@
 			this.setMainContent(tl, elements);
 
 			tl.add(this.showLabel('CHALLENGES', '24px', {
-				startColor: '#7fbac1',
-				endColor: '#7fbac1'
+				startColor: '#176939',
+				endColor: '#176939'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
@@ -441,8 +441,8 @@
 				// Subsequent bids just change the text of the label.
 				if (index === 0) {
 					tl.add(this.showLabel(bid.description.replace('||', ' -- '), '16px', {
-						startColor: '#ae7fc1',
-						endColor: '#ae7fc1'
+						startColor: '#7d5634',
+						endColor: '#7d5634'
 					}), '+=0.03');
 				} else {
 					tl.add(this.changeLabelText(bid.description.replace('||', ' -- ')), '+=0.03');
@@ -489,8 +489,8 @@
 			this.setMainContent(tl, elements);
 
 			tl.add(this.showLabel('PRIZES', '32px', {
-				startColor: '#cc7e7e',
-				endColor: '#cc7e7e'
+				startColor: '#ff9b0f',
+				endColor: '#ff9b0f'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
