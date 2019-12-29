@@ -12,7 +12,7 @@
 				flex-direction: column;
 				justify-content: space-between;
 				white-space: nowrap;
-				font-family: oswald-m;
+				font-family: astounder;
 				font-weight: bold;
 				color: white;
 			}
@@ -23,16 +23,25 @@
 				justify-content: center;
 			}
 
+			#name-area {
+				position: relative;
+				width: 400px;
+				height: 400px;
+			}
+
+			#name-container {
+				display: table;
+				top: 56px;
+				left: 126px;
+				width: 380px;
+				height: 100px;
+			}
+
 			#name {
-				line-height: 1;
+				display: table-cell; 
+				vertical-align: middle; 
+				text-align: center; 
 				text-transform: uppercase;
-				text-align: center;
-				flex-grow: 1;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				font-weight: 700;
-				top: 75px;
 			}
 
 			.center {
@@ -53,21 +62,25 @@
 			}
 
 			#releaseYear {
-				left: 28%;
+				left: 25%;
 			}
 
 			#estimate {
-				left: 67%;
+				left: 69%; /* nice */
 			}
 
 			.minibox {
-				font-size: 16px;
-				top: 223px;
+				font-size: 20px;
+				top: 227px;
 			}
 
 		</style>
-
-		<span id="name" class="shadow center absolute">&nbsp;</span>
+		<div id="name-area">
+			<div id="name-container" class="center absolute">
+				<p id="name" class="shadow">&nbsp;</p>
+			</div>
+		</div>
+		
 		<div class="shadow absolute center" id="category">[[category]]</div>
 
 		<div class="shadow absolute minibox" id="releaseYear">[[releaseYear]]</div>
