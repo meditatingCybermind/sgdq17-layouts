@@ -309,8 +309,8 @@
 			this.setMainContent(tl, elements);
 
 			tl.add(this.showLabel('COMING UP NEXT', '20px', {
-				startColor: '#800d09',
-				endColor: '#800d09'
+				startColor: '#BF130D',
+				endColor: '#BF130D'
 			}), '+=0.03');
 
 			this.showMainContent(tl, elements);
