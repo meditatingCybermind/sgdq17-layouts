@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+
+	<link rel="stylesheet" href="style/base.css">
+	<link rel="import" href="../shared/imports/gsap.html">
+	<link rel="import" href="elements/mm-music/mm-music.html">
+	<style>
+		#container {
+			width: 640px;
+			height: 420px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<mm-music></mm-music>
+	</div>
+
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			TweenLite.to(document.body, 0.333, {
+				opacity: 1,
+				ease: Power1.easeOut
+			});
+		});
+	</script>
+</body>
+</html>

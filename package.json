@@ -103,6 +103,11 @@
         "height": 1080
       },
       {
+        "file": "mm_music.html",
+        "width": 640,
+        "height": 420
+      },
+      {
         "file": "audio_dashboard.html",
         "width": 1920,
         "height": 1080
