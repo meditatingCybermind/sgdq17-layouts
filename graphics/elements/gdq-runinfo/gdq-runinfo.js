@@ -29,7 +29,7 @@
 
 		currentRunChanged(newVal) {
 			this.name = newVal.name.replace('\\n', this.singleLineName ? ' ' : '<br/>');
-			this.category = newVal.category;
+			this.category = newVal.category.replace('\\n', this.category ? ' ' : '<br/>');
 			this.console = newVal.console;
 			this.releaseYear = newVal.releaseYear;
 			this.estimate = newVal.estimate;
